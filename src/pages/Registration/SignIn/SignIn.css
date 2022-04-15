@@ -1,0 +1,29 @@
+.root_container {
+    font-family: 'Titillium Web', sans-serif;
+    background-color: #f0f2f5;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+}
+
+.box-container {
+    width: 400px;
+}
+
+.text-title {
+    color: #2d385e;
+}
+
+.light-text {
+    color: #44525f;
+}
+
+.light-text a {
+    text-decoration: none;
+}
+
+.input-bg {
+    background-color: #f6f6f6;
+}
