@@ -9,8 +9,10 @@ import { NavLink } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import './Dashboard.css';
 import NewQuiz from '../NewQuiz/NewQuiz';
-import ManageQuizzes from '../ManageQuizzes/ManageQuizzes';
 import NotFound from '../../NotFound/NotFound';
+import ManageQuizzes from '../ManageQuizzes/ManageQuizzes/ManageQuizzes';
+import Manage from '../Manage/Manage';
+import Edit from '../Edit/Edit/Edit';
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
@@ -52,6 +54,12 @@ const Dashboard = () => {
                 </Route>
                 <Route path={`${path}/newquiz`}>
                     <NewQuiz></NewQuiz>
+                </Route>
+                <Route path={`${path}/edit/:id`}>
+                    <Edit></Edit>
+                </Route>
+                <Route path={`${path}/manage/:id`}>
+                    <Manage></Manage>
                 </Route>
                 <Route path={`${path}/*`}>
                     <NotFound></NotFound>
