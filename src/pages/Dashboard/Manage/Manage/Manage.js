@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
 import Result from '../Result/Result/Result';
 import useAuth from '../../../../hooks/useAuth';
 import NotFound from '../../../NotFound/NotFound';
+import Qr from '../Qr/Qr';
 
 const Manage = () => {
     const {user} = useAuth();
@@ -63,6 +64,7 @@ const Manage = () => {
             }
         })
     }
+
     return (
         <div className='contaienr my-5'>
             {
@@ -85,11 +87,7 @@ const Manage = () => {
                                     </Button>
                                 </div>
                             }
-                            <div className="btn-colour">
-                                <Button variant="rounded-0 text-white px-3">
-                                    <i className="fas fa-qrcode"></i> QR
-                                </Button>
-                            </div>
+                            <Qr id={id}></Qr>
                         </div>
                     </div>
                     <Result id={id}></Result>
