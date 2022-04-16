@@ -5,7 +5,7 @@ import SingleQuiz from '../SingleQuiz/SingleQuiz';
 const ManageQuizzes = () => {
     const { user } = useAuth();
     const [quizzes, setQuizzes] = useState([]);
-    const url = `http://localhost:5000/quizzes/${user.email}`;
+    const url = `https://stormy-brook-59213.herokuapp.com/quizzes/${user.email}`;
     useEffect(()=> {
         fetch(url)
         .then(res => res.json())

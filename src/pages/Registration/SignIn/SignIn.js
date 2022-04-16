@@ -114,7 +114,7 @@ const SignIn = () => {
                 setPasswordMatched(false);
     };
     return (
-        <div className="root_container py-5 mb-5">
+        <div className="root_container py-5" style={{height: '915px'}}>
             <div className="container">
                 <div className="box">
                     <div className="box-container">

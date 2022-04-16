@@ -14,6 +14,7 @@ const NewQuiz = () => {
         const data = {
             name: info.name,
             host: user.email,
+            status: false,
             questions: [
                 {
                     sl: 1,
@@ -57,7 +58,7 @@ const NewQuiz = () => {
                 }
             ]
         }
-        fetch('http://localhost:5000/quizzes', {
+        fetch('https://stormy-brook-59213.herokuapp.com/quizzes', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -76,7 +77,7 @@ const NewQuiz = () => {
                     a5: info.a5
                 }
                 console.log(answer);
-                fetch('http://localhost:5000/answers', {
+                fetch('https://stormy-brook-59213.herokuapp.com/answers', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

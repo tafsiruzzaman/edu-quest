@@ -11,8 +11,8 @@ import './Dashboard.css';
 import NewQuiz from '../NewQuiz/NewQuiz';
 import NotFound from '../../NotFound/NotFound';
 import ManageQuizzes from '../ManageQuizzes/ManageQuizzes/ManageQuizzes';
-import Manage from '../Manage/Manage';
 import Edit from '../Edit/Edit/Edit';
+import Manage from '../Manage/Manage/Manage';
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();

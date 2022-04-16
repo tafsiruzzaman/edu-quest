@@ -7,6 +7,7 @@ import { useHistory } from 'react-router-dom';
 const EditForm = (props) => {
     const {quiz} = props;
     const ans = props.answer;
+    console.log(ans)
     const name = quiz.name;
     const id = quiz._id;
     const quiz1 = quiz.questions[0];
@@ -34,12 +35,12 @@ const EditForm = (props) => {
             q3o2: quiz3.option2,
             q3o3: quiz3.option3,
             q3o4: quiz3.option4,
-            q4: quiz2.question,
+            q4: quiz4.question,
             q4o1: quiz4.option1,
             q4o2: quiz4.option2,
             q4o3: quiz4.option3,
             q4o4: quiz4.option4,
-            q5: quiz2.question,
+            q5: quiz5.question,
             q5o1: quiz5.option1,
             q5o2: quiz5.option2,
             q5o3: quiz5.option3,
@@ -53,7 +54,7 @@ const EditForm = (props) => {
     });
 
     const onSubmit = info => {
-        fetch(`http://localhost:5000/quiz/${id}`, {
+        fetch(`https://stormy-brook-59213.herokuapp.com/quiz/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -70,7 +71,7 @@ const EditForm = (props) => {
                     a4: info.a4,
                     a5: info.a5
                 }
-                fetch(`http://localhost:5000/answer/${id}`, {
+                fetch(`https://stormy-brook-59213.herokuapp.com/answer/${id}`, {
                     method: 'PUT',
                     headers: {
                         'content-type': 'application/json'
